@@ -1,0 +1,51 @@
+<!DOCTYPE html><html>  <head>    <title>practica1PTC</title>    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <meta charset="UTF-8">    <link rel="stylesheet" href="style.css"/>    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"/>    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>  </head>  <body>    <header class="w3-border-bottom w3-border-green">      <div id = "head-bar" class="w3-bar">        AEMET ®              </div>            <div class="w3-row w3-center">        <div class = "w3-third w3-container w3-center">          <h1>Valores meteorológicos</h1>          <h2>Granada Aeropuerto</h2>        </div>    </header>    <div class="centered-content w3-row">          <div class = "content_left w3-col m3">            <div id="vertical-menu" class="vertical-menu">       {%for k, v in tabla.items()%}
+              <table id="tabla_restaurantes" class="w3-table-all">
+
+              <thead>
+                <tr class="w3-green" colspan="2">
+                  
+                  <th>{{k}}</th>
+                  
+                </tr>
+              </thead>
+
+              <tbody>
+              {%for key,value in v.items()%}
+                <tr>
+                  <td>{{key}}</td>
+                  <td>{{value}}</td>
+                </tr>
+              {%endfor%}
+              </tbody>
+
+            </table>
+            {%endfor%}
+
+            </div>
+          </div>
+
+          <div id = "content-middle" class ="w3-container w3-col m9 w3-center">
+            
+              <h1>Graficas de los datos recogidos por la aplicacion.</h1>
+              <h1> (ultimos 7 dias)</h1>
+            
+            
+            {%for img in nombre_img%}
+            <img src= {{img}} >
+            {%endfor%}
+          </div>
+
+
+
+    </div>
+
+	
+
+
+		<footer class="w3-container w3-teal">
+			Samuel Cardenete Rodríguez. (GPLv3)
+		</footer>
+
+
+	</body>
+</html>
